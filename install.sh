@@ -27,6 +27,10 @@ function wait_until_key_pressed {
   done
 }
 
+# who is the user(sudoer) and where is the script ?
+user=$(whoami)
+script_path=$(pwd)
+
 if [ $install_dependencies == 1 ]
 then
   echo "-------------------------------------------------------------"
@@ -125,9 +129,6 @@ echo "**************************************************************************
 echo "**************************************************************************"
 wait_until_key_pressed "SYSTEM READY - PRESS ANY KEY TO INSTALL THE APP or ctrl-C to abort\n" "" 1
 
-user=$(whoami)
-script_path=$(pwd)
-
 if [ ! -d $colibri_path ]
 then
   sudo mkdir $colibri_path
@@ -145,6 +146,9 @@ sed -i "s|.*gem 'rails', '~> [0-9\.]*'.*|gem 'rails', '~> $rails_version'|" Gemf
 
 sed -i "s~your_db_user_name~$psql_user~" .env
 sed -i "s~your_db_user_pass~$psql_password~" .env
+
+wait_until_key_pressed "going to launch bundle update - press any key or ctrl-C to abort\n" "" 1
+bundle update
 
 if [ $dev == 1 ]
 then
@@ -173,9 +177,6 @@ then
     echo '  "daemonize": true' >> Passengerfile.json
     echo '}' >> Passengerfile.json
   fi
-
-  wait_until_key_pressed "going to launch bundle update - press any key or ctrl-C to abort\n" "" 1
-  bundle update
   
   if [ $(grep "RAILS_SERVE_STATIC_FILES" .env) ]
   then
