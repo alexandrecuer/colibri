@@ -10,6 +10,6 @@ sudo apt-get install git
 ```
 then clone the repo
 ```
-git clone http://github.com/alexandrecuer/colibriScripts
+git clone https://github.com/alexandrecuer/colibriScripts
 
 ```
