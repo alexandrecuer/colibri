@@ -217,7 +217,7 @@ then
   then
     touch rc.local
     echo '#!/bin/bash' >> rc.local
-    echo 'cd $colibri_path/sharebox' >> rc.local
+    echo 'cd '$colibri_path'/sharebox' >> rc.local
     echo 'set -a' >> rc.local
     echo 'source .env' >> rc.local
     echo 'set +a' >> rc.local
