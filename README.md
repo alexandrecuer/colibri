@@ -8,12 +8,20 @@ if git not present
 ```
 sudo apt-get install git
 ```
+
+if /var/www was not created as a specific mount point, create it manually
+```
+sudo mkdir /war/www
+sudo chown pi:pi /var/www
+```
+
 then clone the repo
 ```
 git clone https://github.com/alexandrecuer/colibriScripts
 cd colibriScripts
 ./install.sh
 ```
+
 
 # samba
 
