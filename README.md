@@ -11,7 +11,7 @@ sudo apt-get install git
 
 if /var/www was not created as a specific mount point, create it manually
 ```
-sudo mkdir /war/www
+sudo mkdir /var/www
 sudo chown pi:pi /var/www
 ```
 
