@@ -19,13 +19,19 @@ if you want to have a specific user (eg pi which can act as a suoder) to manage 
 sudo chown pi:pi /var/www
 ```
 
-
 then clone the repo
 ```
 git clone https://github.com/alexandrecuer/colibriScripts
 cd colibriScripts
 ./install.sh
 ```
+To make the production server work with local files, edit /config/environments/production.rb
+
+```
+config.local_storage = 1
+```
+if `/var/www/colibri/sharebox/forge/attachments` is not automatically created, create it !
+
 
 
 # samba
