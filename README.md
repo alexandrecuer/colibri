@@ -32,4 +32,13 @@ sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.old
 sudo cp /home/pi/colibriScripts/smb.conf /etc/samba/smb.conf
 sudo systemctl restart smbd
 ```
+# create user pi as a sudoer
 
+```
+sudo useradd -m -G root pi
+```
+check :
+
+```
+groups pi
+```
