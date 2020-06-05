@@ -9,8 +9,7 @@ if git not present
 sudo apt-get install git
 ```
 
-if /var/www was not created as a specific mount point, create it manually
-if logged as a sudoer :
+if /var/www was not created as a specific mount point, create it manually, once logged as a sudoer :
 ```
 sudo mkdir /var/www
 ```
