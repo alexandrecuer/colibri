@@ -10,10 +10,15 @@ sudo apt-get install git
 ```
 
 if /var/www was not created as a specific mount point, create it manually
+if logged as a sudoer :
 ```
 sudo mkdir /var/www
+```
+if you want to have a specific user (eg pi which can act as a suoder) to manage /var/www :
+```
 sudo chown pi:pi /var/www
 ```
+
 
 then clone the repo
 ```
@@ -41,4 +46,10 @@ check :
 
 ```
 groups pi
+```
+# remove an old install of ruby on ubuntu
+
+```
+sudo apt-get remove ruby
+
 ```
