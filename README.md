@@ -1,4 +1,4 @@
-# colibri
+# Colibri
 
 installation scripts for sharebox application
 
@@ -25,12 +25,14 @@ git clone https://github.com/alexandrecuer/colibriScripts
 cd colibriScripts
 ./install.sh
 ```
-To make the production server work with local files, edit /config/environments/production.rb
+The script will install the app in a `~root~` folder, which can be `/var/www/colibri/sharebox`
+
+To make the production server work with local files, edit `~root~/config/environments/production.rb`
 
 ```
 config.local_storage = 1
 ```
-if `/var/www/colibri/sharebox/forge/attachments` is not automatically created, create it !
+if `~root~/forge/attachments` is not automatically created, create it !
 
 
 
